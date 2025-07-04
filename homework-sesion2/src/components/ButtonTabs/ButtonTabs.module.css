@@ -1,7 +1,8 @@
 .wrapper {
   text-align: center;
-  margin: 2rem auto;
-  max-width: 900px;
+  display: block;
+  margin: 20px auto;
+  max-width: 800px;
 }
 
 .tabList_filled {
@@ -13,6 +14,7 @@
     position: relative;
     text-align: center;
     text-transform: uppercase;
+    justify-content: center;
 }
 
 .tabList_underline {
@@ -23,6 +25,7 @@
     text-align: center;
     text-transform: uppercase;
     border-bottom: 1px solid;
+    max-width:800px;
 }
 
 .tabButton {
@@ -70,4 +73,27 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
+    height: 145px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 799px) {
+    .tabList_filled, .tabList_underline .wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .tabText {
+        width: 100%;
+        height: auto;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    /* .wrapper {
+        grid-template-columns: 1fr;
+    } */
+
 }
